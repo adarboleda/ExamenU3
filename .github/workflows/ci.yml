@@ -42,6 +42,4 @@ jobs:
 
       #11. Simular despliegue
       - name: Simular despliegue
-        #npm ci && npm run build
-        run: |
-          echo "Despliegue simulado exitosamente."
+        run: npm ci && npm run build
