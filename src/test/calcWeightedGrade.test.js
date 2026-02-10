@@ -7,7 +7,7 @@ describe('calcWeightedGrade', () => {
         { score: 80, weight: 0.4 },
         { score: 90, weight: 0.6 },
       ]);
-      expect(result).toBe(87.0);
+      expect(result).toBe(86.0);
     });
 
     test('un solo item con weight=1', () => {

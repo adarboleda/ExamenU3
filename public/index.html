@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfil — Notas & Estadística</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: sans-serif;
+        background-color: #f5f7fa;
+        color: black;
+        line-height: 1.6;
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      header {
+        background-color: #3498db;
+        color: white;
+        padding: 30px;
+        border-radius: 12px;
+        text-align: center;
+        margin-bottom: 30px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      header h1 {
+        font-size: 2rem;
+        margin-bottom: 5px;
+      }
+
+      section {
+        background-color: white;
+        padding: 25px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #e1e8ed;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      }
+
+      section h2 {
+        color: #3498db;
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        font-size: 1.3rem;
+      }
+
+      .info-item {
+        margin-bottom: 12px;
+      }
+
+      .info-item strong {
+        color: black;
+      }
+
+      .presentacion p {
+        text-align: justify;
+        color: black;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+      }
+
+      th,
+      td {
+        padding: 12px 15px;
+        text-align: left;
+        border-bottom: 1px solid #e1e8ed;
+      }
+
+      th {
+        background-color: #3498db;
+        color: white;
+        font-weight: 600;
+      }
+
+      tr:nth-child(even) {
+        background-color: #f8f9fa;
+      }
+
+      tr:hover {
+        background-color: #eef5fc;
+      }
+
+      .calificacion {
+        font-weight: bold;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Perfil — Notas & Estadística</h1>
+      </header>
+
+      <section class="datos-personales">
+        <h2>Datos Personales</h2>
+        <div class="info-item">
+          <strong>Nombre completo:</strong> Abner David Arboleda Roman
+        </div>
+        <div class="info-item"><strong>NRC:</strong> 27854</div>
+        <div class="info-item">
+          <strong>Correo institucional:</strong> adarboleda@espe.edu.ec
+        </div>
+      </section>
+
+      <section class="presentacion">
+        <h2>Presentación</h2>
+        <p>
+          Soy estudiante de Ingeniería de Sofware, estoy actualmente cursando el
+          sexto semestre de la carrera y me interesa el desarrollo web.
+        </p>
+      </section>
+
+      <section class="calificaciones">
+        <h2>Calificaciones por Asignatura</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Asignatura</th>
+              <th>Calificación</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Pruebas de Software</td>
+              <td class="calificacion">15</td>
+            </tr>
+            <tr>
+              <td>Base de Datos Avanzadas</td>
+              <td class="calificacion">18</td>
+            </tr>
+            <tr>
+              <td>Desarrollo Web Avanzado</td>
+              <td class="calificacion">17</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </body>
+</html>
