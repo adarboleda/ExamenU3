@@ -1,0 +1,47 @@
+name: Ci Workflow
+#1. Triggers: Eventos que inician el workflow
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+#2. Jobs: Conjunto de trabajos que se ejecutan en el workflow
+jobs:
+  build_and_test:
+    #3. Runs-on: Define el entorno donde se ejecuta el job
+    runs-on: ubuntu-latest
+
+    #4. Steps: Pasos individuales dentro del job
+    steps:
+      #5. Checkout: Clona el repositorio
+      - name: Clonar el repositorio
+        uses: actions/checkout@v4
+
+      #6. Setup Node.js: Configura el entorno de Node.js
+      - name: Configurar Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20'
+
+      #7. Install dependencies: Instala las dependencias del proyecto
+      - name: Instalar dependencias
+        run: npm install
+
+      #8. Lint code: Ejecuta el linter para verificar la calidad del código
+      - name: Lint del código
+        run: npm run lint
+
+      #9. Ejecutar tests: Ejecuta los tests del proyecto
+      - name: Ejecutar tests
+        run: npm test
+
+      #10. Ejecutar tests de cobertura: Ejecuta los tests con cobertura de código
+      - name: Ejecutar tests con cobertura
+        run: npm run test:coverage
+
+      #11. Simular despliegue
+      - name: Simular despliegue
+        #npm ci && npm run build
+        run: |
+          echo "Despliegue simulado exitosamente."

@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
     "lint": "npm exec eslint .",
     "start": "node index.js",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage"
   },
   "keywords": [],
   "author": "",
@@ -19,5 +19,24 @@
   "devDependencies": {
     "eslint": "^10.0.0",
     "jest": "^30.2.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "transform": {},
+    "testMatch": [
+      "**/test/**/*.test.js"
+    ],
+    "collectCoverageFrom": [
+      "src/utils/**/*.js",
+      "!src/utils/index.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 85,
+        "functions": 85,
+        "lines": 85,
+        "statements": 85
+      }
+    }
   }
 }
